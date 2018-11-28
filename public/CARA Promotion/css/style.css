@@ -1,0 +1,16 @@
+.popover {
+    background: #000;
+    color: #fff;
+}
+
+.popover .arrow:after {
+    border-bottom-color: #000;
+}
+
+.popover-body {
+	color: #fff;
+}
+
+.filters-col {
+	min-height: 400px;
+}
