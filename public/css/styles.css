@@ -1,3 +1,18 @@
+
+.ad-image{
+   width: 100px;
+   height: 115px;
+}
+
+/* -------------------- CTAS ---------------------- */
+.secondary-cta{
+	line-height: 1;
+    font-size: 1rem;
+}
+
+
+/* ------------------ VIDEO AD --------------------- */
+
 .video-thumbnail-container {
 	position: relative;
 }
