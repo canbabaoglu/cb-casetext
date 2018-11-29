@@ -1,0 +1,48 @@
+.video-thumbnail-container {
+	position: relative;
+}
+
+.video-thumbnail-button {
+	width: 150px;
+	height: 84px;
+	position: relative;
+	top: 0;
+	left: 0;
+}
+
+.icon-positioner{
+	width: 150px;
+	height: 84px;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.icon-positioner:hover {
+	background: #000;
+	opacity: 0.5;
+}
+
+.play-icon {
+	position: absolute;
+	top: 20px;
+	left:55px;
+	font-size: 2.5rem !important;
+	z-index: 100;
+}
+
+.ad-video-wrapper {
+	position: relative;
+	display: none;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.ad-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
