@@ -39,7 +39,17 @@
 
 .icon-positioner:hover {
 	background: #000;
-	opacity: 0.5;
+	opacity: 0.6;
+}
+
+.icon-bg{
+	position: absolute;
+	top: 30px;
+	left:60px;
+	background-color: #fff;
+	height: 30px;
+	width: 30px;
+	border-radius: 100%
 }
 
 .play-icon {
