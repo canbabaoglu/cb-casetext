@@ -13,6 +13,10 @@
 
 /* ------------------ VIDEO AD --------------------- */
 
+.video-explanation {
+	font-size: 1.20rem;
+}
+
 .video-thumbnail-container {
 	position: relative;
 }
