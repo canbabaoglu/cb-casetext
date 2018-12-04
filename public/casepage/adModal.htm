@@ -1685,6 +1685,8 @@
              $("#adModal").modal({backdrop: 'static', keyboard: false});  
              $("#timerCount").html(' '+dismissModalCount);
 
+             $(".carousel").carousel();
+
              setInterval(function(){
                dismissModalCount--;
                $("#timerCount").html(' '+dismissModalCount);
@@ -1697,9 +1699,10 @@
          }, showModalCount*1000);
 
          $(".carousel").carousel({
-           interval: 7500,
-           wrap: false
+            interval: 7500,
+            wrap: false
          });
+
          carouselNormalization();
 
          function carouselNormalization() {
