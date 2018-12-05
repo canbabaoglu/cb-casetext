@@ -163,7 +163,15 @@
               data-backdrop="static"
               data-keyboard="false"
             >Fire Testimonials Modal</button>
-            <button class="btn btn-outline-info mr-2 mb-2">Fire CARA Modal</button>
+            
+            <button 
+              id="caraAdModalButton"
+              class="btn btn-outline-info mr-2 mb-2"
+              data-toggle="modal"
+              data-target="#caraAdModal"
+              data-backdrop="static"
+              data-keyboard="false"
+            >Fire CARA Modal</button>
           </div>
 
 
@@ -553,7 +561,7 @@
              </div>
           </section>
 
-          <!-- Testimonials Modal -->
+          <!-- TESTIMONIALS MODAL -->
           <section class="modal-section" >
              <div class="modal container" id="testimonialsAdModal">
                 <div class="modal-dialog mt-5" style="max-width: 750px;">
@@ -708,6 +716,51 @@
                 </div>
              </div>
           </section>
+
+          <!-- CARA MODAL -->
+          <section class="modal-section" >
+             <div class="modal container" id="caraAdModal">
+                <div class="modal-dialog mt-5" style="max-width: 750px;">
+                   <div class="modal-content">
+                      <div class="modal-header d-block"
+                           style="line-height: 0.8rem;">
+                         <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
+                         <h3 class="modal-title">Find on-point cases faster with Casetext CARA A.I.</h3>  
+                      </div>
+                      <div class="modal-body">
+                        <div class="ad-video-wrapper" id="caraVideoWrapper">
+                          <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI?autoplay=1" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 col-md-10 offset-md-1 text-center pt-3"> 
+                            <div class="testimonial-container bg-light p-3 rounded border"> 
+                              <p class="quote">
+                                "Without Casetext’s CARA AI tool, we would have been at a severe disadvantage. Having access to CARA AI was like having a research assistant at counsel’s table.""
+                              </p>
+                              <img src="../img/crawfordPierce.jpg" class="img-fluid rounded-circle mr-3 ad-image">
+                              <span class="testimonial-user-name">
+                                Crawford Pierce, <span class="title">Attorney</span>  
+                              </span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-block d-md-flex justify-content-between align-items-center text-center">
+                        <button class="btn btn-primary btn-lg text-md-left">
+                          Use Casetext Without Ads
+                        </button>
+                        <button 
+                          class="btn btn-link" 
+                          id="dismissModal" 
+                          data-dismiss="modal"
+                          disabled>
+                             Close ad <span id="timer">in<span id="timerCount"></span> seconds</span>
+                        </button>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>
         </div>
       </div>
     </div>
@@ -725,6 +778,7 @@
     var priceComparisonAdModal = $("#priceComparisonAdModal");
     var featuresAdModal = $("#featuresAdModal");
     var testimonialsAdModal = $("#testimonialsAdModal");
+    var caraAdModal = $("#caraAdModal");
 
     //Initialize modals  
     $("#masterComparisonAdModalButton").click(function(){
@@ -739,6 +793,9 @@
     });
     $("#testimonialsAdModalButton").click(function(){ 
       setTimer(testimonialsAdModal, 10);
+    });
+    $("#caraAdModalButton").click(function(){ 
+      setTimer(caraAdModal, 10);
     });
 
      // Set Carousel

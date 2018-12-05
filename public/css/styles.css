@@ -208,6 +208,28 @@
 	}
 }
 
+/* -------------------- CARA Ads ---------------------- */
+
+#caraAdModal .ad-video-wrapper {
+	display: block;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+.quote,
+.testimonial-user-name {
+	font-size: 0.9rem;
+}
+
+.title {
+	font-style: italic;
+}
+
+#caraAdModal .ad-image {
+	width: 40px;
+	height: 40px;
+}
+
 
 
 
