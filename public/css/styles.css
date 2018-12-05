@@ -197,6 +197,17 @@
 	display: block;
 }
 
+@media screen and (max-width: 768px) {
+	.menu-image{
+		width: 25px;
+	}
+
+	.list-inline-item.active .menu-image,
+	.list-inline-item .menu-image:hover{
+		width: 35px;
+	}
+}
+
 
 
 
