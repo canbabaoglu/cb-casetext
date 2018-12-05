@@ -114,228 +114,726 @@
       <style>.bs-tooltip-bottom[_nghost-c91]   .arrow[_ngcontent-c91], .bs-tooltip-top[_nghost-c91]   .arrow[_ngcontent-c91]{left:calc(50% - .4rem)}.bs-tooltip-bottom-left[_nghost-c91]   .arrow[_ngcontent-c91], .bs-tooltip-top-left[_nghost-c91]   .arrow[_ngcontent-c91]{left:1em}.bs-tooltip-bottom-right[_nghost-c91]   .arrow[_ngcontent-c91], .bs-tooltip-top-right[_nghost-c91]   .arrow[_ngcontent-c91]{left:auto;right:.8rem}.bs-tooltip-left[_nghost-c91]   .arrow[_ngcontent-c91], .bs-tooltip-right[_nghost-c91]   .arrow[_ngcontent-c91]{top:calc(50% - .4rem)}.bs-tooltip-left-top[_nghost-c91]   .arrow[_ngcontent-c91], .bs-tooltip-right-top[_nghost-c91]   .arrow[_ngcontent-c91]{top:.4rem}.bs-tooltip-left-bottom[_nghost-c91]   .arrow[_ngcontent-c91], .bs-tooltip-right-bottom[_nghost-c91]   .arrow[_ngcontent-c91]{top:auto;bottom:.4rem}</style>
    </head>
 
-    <title>In Opinion Ad Options</title>
+    <title>Modal Ad Options</title>
   </head>
   <body class="bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-10 col-lg-10 col-xl-8 offset-md-1 offset-lg-1 offset-xl-2">
-          <h1 class="display-5 py-3 border-bottom">Different options for the <strong>"In Opinion Ads"</strong></h1>
-          
-          <!-- PRICE TESTIMONIAL -->
-          <section class="py-3 border-bottom">
-            <h5>Option 1</h5>
-            <div class="card mb-4">
-               <div class="card-body">
-                  <small class="text-muted">YOU ARE USING A PREVIEW VERSION OF CASETEXT</small>
-                  <div class="card-title">
-                     <h3>Better than Lexis for <strong> under $50 a month</strong></h3>
-                  </div>
-                  <div class="card-text mb-3 border rounded bg-light p-3 d-md-flex  align-items-center text-center text-md-left">
-                     <img src="../img/peter-frost.jpg" 
-                          class="img-fluid rounded-circle mr-3 ad-image"
-                     >
-                     <blockquote class="blockquote mb-0">
-                        For a sole practioner, [Casetext] gives great quality at an eminently affordable price.  Love it.
-                        <footer class="blockquote-footer">
-                           Peter Frost,
-                          <cite title="Source Title">Attorney</cite>
-                        </footer>
-                     </blockquote>
-                  </div>
-                  <div class="d-md-flex justify-content-between align-items-center text-center">
-                     <button class="btn btn-primary btn text-center text-md-left mb-3 mb-md-0">   
-                        See Casetext's Features
-                     </button>
-                     <div class="text-center text-md-right secondary-cta">
-                        <small class="text-muted">Use Casetext without ads</small><br>
-                        <a href="">Start your free trial</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
+        <div class="col-12 col-md-8 offset-md-2">
+          <h1 class="display-5 py-3 border-bottom text-center">
+            Different options for the <strong>"Modal Ads"</strong>
+          </h1>
+          <div class="buttons text-center py-3">          
+            <button
+              id="masterComparisonAdModalButton" 
+              class="btn btn-outline-info mr-2 mb-2"
+              data-toggle="modal"
+              data-target="#masterComparisonAdModal"
+              data-backdrop="static" 
+              data-keyboard="false"
+            >
+              Fire Master Lexis Comparison Modal
+            </button>
+
+            <button
+              id="priceComparisonAdModalButton" 
+              class="btn btn-outline-info mr-2 mb-2"
+              data-toggle="modal"
+              data-target="#priceComparisonAdModal"
+              data-backdrop="static" 
+              data-keyboard="false"
+            >
+              Fire Price Comparison Modal
+            </button>
+
+            <button
+              id="featuresAdModalButton" 
+              class="btn btn-outline-info mr-2 mb-2"
+              data-toggle="modal"
+              data-target="#featuresAdModal"
+              data-backdrop="static" 
+              data-keyboard="false"
+            >Fire Features Modal</button>
+
+            <button
+              id="testimonialsAdModalButton" 
+              class="btn btn-outline-info mr-2 mb-2"
+              data-toggle="modal"
+              data-target="#testimonialsAdModal"
+              data-backdrop="static"
+              data-keyboard="false"
+            >Fire Testimonials Modal</button>
+            <button class="btn btn-outline-info mr-2 mb-2">Fire CARA Modal</button>
+          </div>
+
+
+          <!-- MASTER LEXIS COMPARISON MODAL -->
+          <section class="modal-section" >
+             <div class="modal container" id="masterComparisonAdModal">
+                <div class="modal-dialog mt-5" style="max-width: 750px;">
+                   <div class="modal-content">
+                      <div class="modal-header d-block"
+                           style="line-height: 0.8rem;">
+                         <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
+                         <h3 class="modal-title">Casetext offers more and costs less</h3>  
+                      </div>
+                      <div class="modal-body">
+                         <div class="carousel slide" data-ride="carousel" id="comparisonCarousel">
+                            <div class="carousel-inner d-flex align-items-center">
+                               <!-- Content slide -->
+                               <div class="carousel-item active">
+                                  <h4 class="pt-2 pb-1 pl-4">Essential content</h4>
+                                  <div class="row table-container-row pb-4 ml-4">
+                                     <div class="col-12 col-md-10">
+                                        <!-- Table header-->
+                                        <div class="row table-row border-bottom">
+                                           <div class="offset-md-6 offset-4 col-md-3 col-4 casetext-bg d-flex align-items-center header-1">
+                                              <img src="../img/casetext-logo-dark.png" class="img-fluid">
+                                           </div>
+                                           <div class="col-4 col-md-3 lexis-bg d-flex align-items-center header-2">
+                                              <img src="../img/lexis-logo.svg" class="img-fluid">
+                                           </div>
+                                        </div>
+                                        <!--State primary law-->
+                                        <div class="row table-row border-bottom">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">State primary law</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                              50 states
+                                              <span class="winner bg-succeess text-light">
+                                                 <strong>Winner</strong>
+                                              </span>
+                                           </div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center">1 state *</div>
+                                        </div>
+                                        <!--Federal primary law-->
+                                        <div class="row table-row border-bottom">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Federal primary law</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                        </div>
+                                        <!-- Statutes and regs -->
+                                        <div class="row table-row">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Statutes &amp; regulations</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                               <!-- Features Slide -->
+                               <div class="carousel-item">
+                                  <h4 class="pt-2 pb-1 pl-4">Powerful research features</h4>
+                                  <div class="row table-container-row pb-4 ml-4">
+                                     <div class="col-12 col-md-10">
+                                        <!-- Table header-->
+                                        <div class="row table-row border-bottom">
+                                           <div class="offset-md-6 offset-4 col-md-3 col-4 casetext-bg d-flex align-items-center header-1">
+                                              <img src="../img/casetext-logo-dark.png" class="img-fluid">
+                                           </div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center header-2">
+                                              <img src="../img/lexis-logo.svg" class="img-fluid">
+                                           </div>
+                                        </div>
+                                        <!-- CARA -->
+                                        <div class="row table-row border-bottom">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Artificial Intelligence assisted search</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                              <div class="ad-text-wrapper py-2">
+                                                 <strong>CARA A.I.</strong><br>
+                                                 <small class="text-secondary">Find on-point authorities 25% faster</small>
+                                              </div>
+                                              <span class="winner bg-succeess text-light">
+                                                 <strong>Winner</strong>
+                                              </span>
+                                           </div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center"><i class="material-icons align-middle">close</i></div>
+                                        </div>
+                                        <!-- Citator -->
+                                        <div class="row table-row border-bottom">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Comprehensive citator</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                        </div>
+                                        <!-- Headnotes and case summaries -->
+                                        <div class="row table-row">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Headnotes and case summaries</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center"><i class="material-icons align-middle">check</i></div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+
+                               <!-- Pricing Slide -->
+                               <div class="carousel-item">
+                                  <h4 class="pt-2 pb-1 pl-4">More affordable &amp; more flexible pricing</h4>
+                                  <div class="row table-container-row pb-4 ml-4">
+                                     <div class="col-12 col-md-10">
+                                        <!-- Table header-->
+                                        <div class="row table-row border-bottom">
+                                           <div class="offset-md-6 offset-4 col-md-3 col-4 casetext-bg d-flex align-items-center header-1">
+                                              <img src="../img/casetext-logo-dark.png" class="img-fluid">
+                                           </div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center header-2">
+                                              <img src="../img/lexis-logo.svg" class="img-fluid">
+                                           </div>
+                                        </div>
+                                        <!--Yearly price-->
+                                        <div class="row table-row border-bottom">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Yearly price</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                              <div class="ad-text-wrapper py-2">
+                                                 $585<br>
+                                                 <small class="text-secondary">per year</small>
+                                              </div>
+                                              <span class="winner bg-succeess text-light">
+                                                 <strong>Winner</strong>
+                                              </span>
+                                           </div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center">
+                                              <div class="ad-text-wrapper py-2">
+                                                 <span>$2,580 - $3,726</span><br>
+                                                 <small class="text-secondary">per year</small>
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <!--Additional Fees-->
+                                        <div class="row table-row border-bottom">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Additional fees</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                              None
+                                              <span class="winner bg-succeess text-light">
+                                                 <strong>Winner</strong>
+                                              </span>
+                                           </div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center">
+                                              <div class="ad-text-wrapper py-2">
+                                                 <span>$20-$60</span><br>
+                                                 <small class="text-secondary">for each out-of-plan item</small>
+                                              </div>
+                                           </div>
+                                        </div>
+                                        <!-- Subscription Terms -->
+                                        <div class="row table-row">
+                                           <div class="col-4 col-md-6 d-flex align-items-center">Subscription terms</div>
+                                           <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                              Monthly or annually
+                                              <span class="winner bg-succeess text-light">
+                                                 <strong>Winner</strong>
+                                              </span>
+                                           </div>
+                                           <div class="col-md-3 col-4 lexis-bg d-flex align-items-center">1-3 years</div>
+                                        </div>
+                                     </div>
+                                  </div>
+                               </div>
+                            </div>
+                         </div>
+                      </div>
+                      <div class="modal-footer d-block d-md-flex justify-content-between align-items-center text-center">
+                         <button class="btn btn-primary btn-lg text-md-left">
+                            Use Casetext Without Ads
+                         </button>
+                         <button 
+                            class="btn btn-link" 
+                            id="dismissModal" 
+                            data-dismiss="modal"
+                            disabled>
+                               Close ad <span id="timer">in<span id="timerCount"></span> seconds</span>
+                         </button>
+                      </div>
+                   </div>
+                </div>
+             </div>
           </section>
 
-          <!-- CARA TESTIMONIAL-->
-          <section class="py-3 border-bottom">
-            <h5>Option 2</h5>
-            <div class="card mb-4">
-               <div class="card-body">
-                  <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
-                  <div class="card-title">
-                     <h3>Find on-point cases faster with <strong>Casetext CARA A.I.</strong></h3>
-                  </div>
-                  <div class="card-text mb-3 border rounded bg-light p-3 d-md-flex  align-items-center text-center text-md-left">
-                     <img src="../img/crawfordPierce.jpg" 
-                          class="img-fluid rounded-circle mr-3 ad-image"
-                     >
-                     <blockquote class="blockquote mb-0">
-                        Without Casetext’s CARA AI tool, we would have been at a severe disadvantage. Having access to CARA AI was like having a research assistant at counsel’s table.
-                        <footer class="blockquote-footer">
-                           Crawford Pierce,
-                          <cite title="Source Title">Attorney</cite>
-                        </footer>
-                     </blockquote>
-                  </div>
-                  <div class="d-md-flex justify-content-between align-items-center text-center">
-                     <button 
-                        class="btn btn-primary text-center text-md-left mb-3 mb-md-0">
-                        Learn More About CARA A.I.
-                     </button>
-                     <div class="text-center text-md-right secondary-cta">
-                        <small class="text-muted">Use Casetext without ads</small><br>
-                        <a href="">Start your free trial</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-          </section>
-
-          <!-- COPY WITH CITE -->
-          <section class="py-3 border-bottom" id="copyWithCiteAd">
-            <h5>Option 3</h5>
-            <div class="card mb-4">
-               <div class="card-body">
-                  <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
-                  <div class="card-title">
-                     <h3>Copy and paste with full pincite</h3>
-                  </div>
-                  <div class="card-text mb-3 border rounded bg-light p-3">
-                    <div class="initial-ad-content ">
-                      <div class="initial-ad-content-wrapper d-md-flex align-items-center text-center text-md-left">
-                        <div class="video-thumbnail-container mr-md-3 d-inline-block">
-                          <img class="video-thumbnail ng-star-inserted border rounded" src="https://img.youtube.com/vi/0meoPY9_WM0/maxresdefault.jpg" width="150" height="auto" >
-                          <div class="icon-positioner"></div>
-                          <div class="icon-bg"></div>
-                          <i class="material-icons icon-blue play-icon text-primary">play_circle_filled_white</i>
-                          </a>
+          <!-- PRICE COMPARISON MODAL -->
+          <section class="modal-section" >
+             <div class="modal container" id="priceComparisonAdModal">
+                <div class="modal-dialog mt-5" style="max-width: 750px;">
+                   <div class="modal-content">
+                      <div class="modal-header d-block"
+                           style="line-height: 0.8rem;">
+                         <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
+                         <h3 class="modal-title">Casetext offers more and costs less</h3>  
+                      </div>
+                      <div class="modal-body">
+                        <div class="row table-container-row pb-4 ml-4">
+                           <div class="col-12 col-md-10">
+                              <!-- Table header-->
+                              <div class="row table-row border-bottom">
+                                 <div class="offset-md-6 offset-4 col-md-3 col-4 casetext-bg d-flex align-items-center header-1">
+                                    <img src="../img/casetext-logo-dark.png" class="img-fluid">
+                                 </div>
+                                 <div class="col-md-3 col-4 lexis-bg d-flex align-items-center header-2">
+                                    <img src="../img/lexis-logo.svg" class="img-fluid">
+                                 </div>
+                              </div>
+                              <!--Yearly price-->
+                              <div class="row table-row border-bottom">
+                                 <div class="col-4 col-md-6 d-flex align-items-center">Yearly price</div>
+                                 <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                    <div class="ad-text-wrapper py-2">
+                                       $585<br>
+                                       <small class="text-secondary">per year</small>
+                                    </div>
+                                    <span class="winner bg-succeess text-light">
+                                       <strong>Winner</strong>
+                                    </span>
+                                 </div>
+                                 <div class="col-md-3 col-4 lexis-bg d-flex align-items-center">
+                                    <div class="ad-text-wrapper py-2">
+                                       <span>$2,580 - $3,726</span><br>
+                                       <small class="text-secondary">per year</small>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!--Additional Fees-->
+                              <div class="row table-row border-bottom">
+                                 <div class="col-4 col-md-6 d-flex align-items-center">Additional fees</div>
+                                 <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                    None
+                                    <span class="winner bg-succeess text-light">
+                                       <strong>Winner</strong>
+                                    </span>
+                                 </div>
+                                 <div class="col-md-3 col-4 lexis-bg d-flex align-items-center">
+                                    <div class="ad-text-wrapper py-2">
+                                       <span>$20-$60</span><br>
+                                       <small class="text-secondary">for each out-of-plan item</small>
+                                    </div>
+                                 </div>
+                              </div>
+                              <!-- Subscription Terms -->
+                              <div class="row table-row">
+                                 <div class="col-4 col-md-6 d-flex align-items-center">Subscription terms</div>
+                                 <div class="col-md-3 col-4 casetext-bg d-flex align-items-center">
+                                    Monthly or annually
+                                    <span class="winner bg-succeess text-light">
+                                       <strong>Winner</strong>
+                                    </span>
+                                 </div>
+                                 <div class="col-md-3 col-4 lexis-bg d-flex align-items-center">1-3 years</div>
+                              </div>
+                           </div>
                         </div>
-                         <p class="mb-0 video-explanation">
-                           Quickly export the language you need in a format ready to insert into your brief, including the pincite.
-                         </p>
                       </div>
-                    </div>
-                    <div class="ad-video-wrapper">
-                      <iframe src="https://www.youtube.com/embed/0meoPY9_WM0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
-                    </div>
-                  </div>
-                  <div class="d-md-flex justify-content-between align-items-center text-center">
-                     <button class="btn btn-primary text-center text-md-left mb-3 mb-md-0">
-                        See Casetext's Features
-                     </button>
-                     <div class="text-center text-md-right secondary-cta">
-                        <small class="text-muted">Use Casetext without ads</small><br>
-                        <a href="">Start your free trial</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
+                      <div class="modal-footer d-block d-md-flex justify-content-between align-items-center text-center">
+                         <button class="btn btn-primary btn-lg text-md-left">
+                            Use Casetext Without Ads
+                         </button>
+                         <button 
+                            class="btn btn-link" 
+                            id="dismissModal" 
+                            data-dismiss="modal"
+                            disabled>
+                               Close ad <span id="timer">in<span id="timerCount"></span> seconds</span>
+                         </button>
+                      </div>
+                   </div>
+                </div>
+             </div>
           </section>
 
-          <!-- CITATOR -->
-          <section class="py-3 border-bottom" id="citatorAd">
-            <h5>Option 4</h5>
-            <div class="card mb-4">
-               <div class="card-body">
-                  <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
-                  <div class="card-title">
-                     <h3>Know when cases have been overruled or reversed</h3>
-                  </div>
-                  <div class="card-text mb-3 border rounded bg-light p-3">
-                    <div class="initial-ad-content ">
-                      <div class="initial-ad-content-wrapper d-md-flex align-items-center text-center text-md-left">
-                        <div class="video-thumbnail-container mr-md-3 d-inline-block">
-                            <img class="video-thumbnail ng-star-inserted border rounded" src="https://img.youtube.com/vi/NezpaRYvSw8/maxresdefault.jpg" width="150" height="auto" >
-                            <div class="icon-positioner"></div>
-                            <div class="icon-bg"></div>
-                            <i class="material-icons icon-blue play-icon text-primary"">play_circle_filled_white</i>
-                            </a>
+          <!-- FEATURES MODAL -->
+          <section class="modal-section" >
+             <div class="modal container" id="featuresAdModal">
+                <div class="modal-dialog mt-5" style="max-width: 750px;">
+                   <div class="modal-content">
+                      <div class="modal-header d-block"
+                           style="line-height: 0.8rem;">
+                         <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
+                         <h3 class="modal-title">Casetext offers more and costs less</h3>  
+                      </div>
+                      <div class="modal-body">
+                        <div class="initial-ad-content">
+                          <div class="row">                        
+                            <div class="col-12 col-md-4 mb-2">
+                              <div class="d-flex justify-content-center mb-2 mb-md-0">
+                                <div class="video-thumbnail-container">
+                                  <img class="video-thumbnail ng-star-inserted border rounded" src="https://img.youtube.com/vi/0meoPY9_WM0/maxresdefault.jpg" width="200" height="auto" >
+                                  <div class="icon-positioner" data-video="#caraVideoWrapper"></div>
+                                  <div class="icon-bg"></div>
+                                  <i class="material-icons icon-blue play-icon text-primary" data-video="#caraVideoWrapper">play_circle_filled_white</i>
+                                  </a>
+                                </div>
+                              </div>
+                              <p class="text-center">Find better results faster: <strong>CARA A.I. Search</strong></p>
+                            </div>
+                            <div class="col-12 col-md-4 mb-2">
+                              <div class="d-flex justify-content-center mb-2 mb-md-0">
+                                <div class="video-thumbnail-container">
+                                  <img class="video-thumbnail ng-star-inserted border rounded" src="https://img.youtube.com/vi/0meoPY9_WM0/maxresdefault.jpg" width="200" height="auto" >
+                                  <div class="icon-positioner" data-video="#citatorVideoWrapper"></div>
+                                  <div class="icon-bg"></div>
+                                  <i class="material-icons icon-blue play-icon text-primary"
+                                  data-video="#citatorVideoWrapper">play_circle_filled_white</i>
+                                  </a>
+                                </div>
+                              </div>
+                              <p class="text-center">Don't ever cite bad law: <strong>Citator</strong></p>
+                            </div>
+                            <div class="col-12 col-md-4 mb-2">
+                              <div class="d-flex justify-content-center mb-2 mb-md-0">
+                                <div class="video-thumbnail-container">
+                                  <img class="video-thumbnail ng-star-inserted border rounded" src="https://img.youtube.com/vi/0meoPY9_WM0/maxresdefault.jpg" width="200" height="auto" >
+                                  <div class="icon-positioner" data-video="#citingBriefsVideoWrapper"></div>
+                                  <div class="icon-bg"></div>
+                                  <i class="material-icons icon-blue play-icon text-primary" data-video="#citingBriefsVideoWrapper">play_circle_filled_white</i>
+                                  </a>
+                                </div>
+                              </div>
+                              <p class="text-center">Read briefs at no additional cost: <strong>Citing briefs</strong></p>
+                            </div>
                           </div>
-                         <p class="mb-0 video-explanation">
-                           Confidently cite case law by utilizing Casetext's comprehensive citator.
-                         </p>
-                      </div>
-                    </div>
-                    <div class="ad-video-wrapper">
-                      <iframe src="https://www.youtube.com/embed/NezpaRYvSw8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
-                    </div>
-                  </div>
-                  <div class="d-md-flex justify-content-between align-items-center text-center">
-                     <button class="btn btn-primary text-center text-md-left mb-3 mb-md-0">
-                        See Casetext's Features
-                     </button>
-                     <div class="text-center text-md-right secondary-cta">
-                        <small class="text-muted">Use Casetext without ads</small><br>
-                        <a href="">Start your free trial</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
-          </section>
-
-          <!-- CITING CASES -->
-          <section class="py-3 border-bottom" id="citingCasesAd">
-            <h5>Option 5</h5>
-            <div class="card mb-4">
-               <div class="card-body">
-                  <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
-                  <div class="card-title">
-                     <h3>See cases citing the case you're reading</h3>
-                  </div>
-                  <div class="card-text mb-3 border rounded bg-light p-3">
-                    <div class="initial-ad-content ">
-                      <div class="initial-ad-content-wrapper d-md-flex align-items-center text-center text-md-left">
-                        <div class="video-thumbnail-container mr-md-3 d-inline-block">
-                            <img class="video-thumbnail ng-star-inserted border rounded" src="https://img.youtube.com/vi/4g99i_Fm4FI/maxresdefault.jpg" width="150" height="auto">
-                            <div class="icon-positioner"></div>
-                            <div class="icon-bg"></div>
-                            <i class="material-icons icon-blue play-icon text-primary">play_circle_filled_white</i>
-                            </a>
+                          <div class="row px-2">                        
+                            <div class="col-12 col-md-8 offset-md-2 mb-2 text-center additional-video-links bg-light rounded py-3">
+                              And much more:<br> 
+                              <a class="text-link video-link text-primary" data-video="#citingCasesVideoWrapper">Citing cases</a>, 
+                              <a class="text-link video-link text-primary" data-video="#attorneyAnalysesVideoWrapper">Attorney analyses</a>, 
+                              <a class="text-link video-link text-primary" data-video="#annotatedStatutesVideoWrapper">Annotated statutes</a>, 
+                              <a class="text-link video-link text-primary" data-video="#cwcVideoWrapper">Copy with cite</a>, 
+                              <a class="text-link video-link text-primary"data-video="#motionTypeVideoWrapper">Motion type filters</a>, 
+                              <a class="text-link video-link text-primary" data-video="#partyTypeVideoWrapper">Party type filters</a> ...etc
+                            </div>
                           </div>
-                         <p class="mb-0 video-explanation">
-                           See the full list of citing cases; browse, filter, and search them with ease.
-                         </p>
+                        </div>
+                        <!-- Videos-->
+                        <div class="row">
+                          <div class="col-12 text-center">
+                            <div class="ad-video-wrapper" id="caraVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="citatorVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="citingBriefsVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="citingCasesVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="attorneyAnalysesVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="annotatedStatutesVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="cwcVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="motionTypeVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                            <div class="ad-video-wrapper" id="partyTypeVideoWrapper">
+                              <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12 pt-2">
+                            <a class="ml-2 back-to-features-link text-primary text-link">Back to features list</a>
+                          </div>
+                        </div>
                       </div>
-                    </div>
-                    <div class="ad-video-wrapper">
-                      <iframe src="https://www.youtube.com/embed/4g99i_Fm4FI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen class="ad-video"></iframe>
-                    </div>
-                  </div>
-                  <div class="d-md-flex justify-content-between align-items-center text-center">
-                     <button class="btn btn-primary text-center text-md-left mb-3 mb-md-0">
-                        See Casetext's Features
-                     </button>
-                     <div class="text-center text-md-right secondary-cta">
-                        <small class="text-muted">Use Casetext without ads</small><br>
-                        <a href="">Start your free trial</a>
-                     </div>
-                  </div>
-               </div>
-            </div>
+                      <div class="modal-footer d-block d-md-flex justify-content-between align-items-center text-center">
+                         <button class="btn btn-primary btn-lg text-md-left">
+                            Use Casetext Without Ads
+                         </button>
+                         <button 
+                            class="btn btn-link" 
+                            id="dismissModal" 
+                            data-dismiss="modal"
+                            disabled>
+                               Close ad <span id="timer">in<span id="timerCount"></span> seconds</span>
+                         </button>
+                      </div>
+                   </div>
+                </div>
+             </div>
           </section>
 
+          <!-- Testimonials Modal -->
+          <section class="modal-section" >
+             <div class="modal container" id="testimonialsAdModal">
+                <div class="modal-dialog mt-5" style="max-width: 750px;">
+                   <div class="modal-content">
+                      <div class="modal-header d-block"
+                           style="line-height: 0.8rem;">
+                         <small class="text-muted">YOU ARE USING AN AD SUPPORTED PREVIEW VERSION OF CASETEXT</small>
+                         <h3 class="modal-title">Attorneys love using Casetext</h3>  
+                      </div>
+                      <div class="modal-body">
+                        <div class="row">
+                          <div class="col-12">
+                            <ul class="list-inline ml-3">
+                              <li class="list-inline-item testimonial-menu-item active">
+                                <img src="../img/kelley-king.jpg" class="img-fluid rounded-circle menu-image" data-testimonial="#kellyKingTestimonial">
+                              </li>
+                              <li class="list-inline-item testimonial-menu-item">
+                                <img src="../img/corcoran.jpg" class="img-fluid rounded-circle menu-image" data-testimonial="#debraCorcoranTestimonial">
+                              </li>
+                              <li class="list-inline-item testimonial-menu-item">
+                                <img src="../img/crawfordPierce.jpg" class="img-fluid rounded-circle menu-image" data-testimonial="#crawfordPierceTestimonial">
+                              </li>
+                              <li class="list-inline-item testimonial-menu-item">
+                                <img src="../img/infurna.jpg" class="img-fluid rounded-circle menu-image" data-testimonial="#justinInfurnaTestimonial">
+                              </li>
+                              <li class="list-inline-item testimonial-menu-item">
+                                <img src="../img/amlong.jpg" class="img-fluid rounded-circle menu-image" data-testimonial="#karenAmlongTestimonial">
+                              </li>
+                              <li class="list-inline-item testimonial-menu-item">
+                                <img src="../img/peter-frost.jpg" class="img-fluid rounded-circle menu-image" data-testimonial="#peterFrostTestimonial">
+                              </li>
+                              <li class="list-inline-item testimonial-menu-item">
+                                <img src="../img/rick-georges.jpg" class="img-fluid rounded-circle menu-image" data-testimonial="#rickGeorgesTestimonial">
+                              </li>
+                            </ul>
+                          </div>
+                        </div>
+
+                        <div class="row">
+                          <div class="col-12">
+                            <!-- KELLY KING - Intuituve and Relavant Results -->
+                            <div class="testimomnial-wrapper mb-3 active" id="kellyKingTestimonial">
+                              <div class="card-text border rounded bg-light p-3 d-md-flex  align-items-center text-center text-md-left">
+                                <img src="../img/kelley-king.jpg" class="img-fluid rounded-circle mr-3 ad-image">
+                                <blockquote class="blockquote mb-0">
+                                  I find the [Casetext] search engine far more intuitive than other research sites and far more likely to produce relevant results.
+                                  <footer class="blockquote-footer">
+                                     Kelly King,
+                                    <cite title="Source Title">Attorney</cite>
+                                  </footer>
+                                </blockquote>
+                              </div>
+                            </div>
+                            <!-- DEBRA CORCORAN - Get rid of lexis -->
+                            <div class="testimomnial-wrapper mb-3" id="debraCorcoranTestimonial">
+                              <div class="card-text border rounded bg-light p-3 d-md-flex  align-items-center text-center text-md-left">
+                                <img src="../img/corcoran.jpg" class="img-fluid rounded-circle mr-3 ad-image">
+                                <blockquote class="blockquote mb-0">
+                                  With Casetext, you can get rid of the high costs of Lexis and Westlaw!
+                                  <footer class="blockquote-footer">
+                                     Debra Corcoran,
+                                    <cite title="Source Title">Attorney</cite>
+                                  </footer>
+                                </blockquote>
+                              </div>
+                            </div>
+                            <!-- CRAWFORD PIERCE - CARA -->
+                            <div class="testimomnial-wrapper mb-3" id="crawfordPierceTestimonial">
+                              <div class="card-text border rounded bg-light p-3 d-md-flex  align-items-center text-center text-md-left">
+                                <img src="../img/crawfordPierce.jpg" class="img-fluid rounded-circle mr-3 ad-image">
+                                <blockquote class="blockquote mb-0">
+                                  Without Casetext’s CARA AI tool, we would have been at a severe disadvantage. Having access to CARA AI was like having a research assistant at counsel’s table.
+                                  <footer class="blockquote-footer">
+                                     Crawford Pierce,
+                                    <cite title="Source Title">Attorney</cite>
+                                  </footer>
+                                </blockquote>
+                              </div>
+                            </div>
+                            <!-- JUSTIN INFURNA - Speed/efficiency comparison -->
+                            <div class="testimomnial-wrapper mb-3" id="justinInfurnaTestimonial">
+                              <div class="card-text border rounded bg-light p-3 d-md-flex  align-items-center text-center text-md-left">
+                                <img src="../img/infurna.jpg" class="img-fluid rounded-circle mr-3 ad-image">
+                                <blockquote class="blockquote mb-0">
+                                  I'm really impressed with the service. If you use Lexis for search you're going to be on there forever. That's why I use Casetext.
+                                  <footer class="blockquote-footer">
+                                     Justin Infurna,
+                                    <cite title="Source Title">Attorney</cite>
+                                  </footer>
+                                </blockquote>
+                              </div>
+                            </div>
+                            <!-- KAREN AMLONG - Better results for clients-->
+                            <div class="testimomnial-wrapper mb-3" id="karenAmlongTestimonial">
+                              <div class="card-text border rounded bg-light p-3 d-md-flex  align-items-center text-center text-md-left">
+                                <img src="../img/amlong.jpg" class="img-fluid rounded-circle mr-3 ad-image">
+                                <blockquote class="blockquote mb-0">
+                                  We get better results for our clients with Casetext.
+                                  <footer class="blockquote-footer">
+                                     Karen Amlong,
+                                    <cite title="Source Title">Attorney</cite>
+                                  </footer>
+                                </blockquote>
+                              </div>
+                            </div>
+                            <!-- PETER FROST - Quality and Affordable-->
+                            <div class="testimomnial-wrapper mb-3" id="peterFrostTestimonial">
+                              <div class="card-text border rounded bg-light p-2 d-md-flex  align-items-center text-center text-md-left">
+                                 <img src="../img/peter-frost.jpg" 
+                                      class="img-fluid rounded-circle mr-3 ad-image"
+                                 >
+                                 <blockquote class="blockquote mb-0">
+                                    For a sole practioner, [Casetext] gives great quality at an eminently affordable price.  Love it.
+                                    <footer class="blockquote-footer">
+                                       Peter Frost,
+                                      <cite title="Source Title">Attorney</cite>
+                                    </footer>
+                                 </blockquote>
+                              </div>
+                            </div>
+                            <!-- RICK GEORGES - Future of legal research-->
+                            <div class="testimomnial-wrapper mb-3" id="rickGeorgesTestimonial">
+                              <div class="card-text border rounded bg-light p-2 d-md-flex  align-items-center text-center text-md-left">
+                                 <img src="../img/rick-georges.jpg" 
+                                      class="img-fluid rounded-circle mr-3 ad-image"
+                                 >
+                                 <blockquote class="blockquote mb-0">
+                                    Casetext is the future of legal research.
+                                    <footer class="blockquote-footer">
+                                       Rick Georges,
+                                      <cite title="Source Title">Attorney</cite>
+                                    </footer>
+                                 </blockquote>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="modal-footer d-block d-md-flex justify-content-between align-items-center text-center">
+                        <button class="btn btn-primary btn-lg text-md-left">
+                          Use Casetext Without Ads
+                        </button>
+                        <button 
+                          class="btn btn-link" 
+                          id="dismissModal" 
+                          data-dismiss="modal"
+                          disabled>
+                             Close ad <span id="timer">in<span id="timerCount"></span> seconds</span>
+                        </button>
+                      </div>
+                   </div>
+                </div>
+             </div>
+          </section>
         </div>
       </div>
     </div>
 
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-    <!-- Optional JavaScript -->
-    <script type="text/javascript">
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 
-      $(".icon-positioner, .icon-blue").click(function(){
+  <script type="text/javascript">
+
+    //Fire Modals
+    var masterComparisonAdModal = $("#masterComparisonAdModal");
+    var priceComparisonAdModal = $("#priceComparisonAdModal");
+    var featuresAdModal = $("#featuresAdModal");
+    var testimonialsAdModal = $("#testimonialsAdModal");
+
+    //Initialize modals  
+    $("#masterComparisonAdModalButton").click(function(){
+      setTimer(masterComparisonAdModal, 20);
+      carouselNormalization();
+    });
+    $("#priceComparisonAdModalButton").click(function(){ 
+      setTimer(priceComparisonAdModal, 5);
+    });
+    $("#featuresAdModalButton").click(function(){ 
+      setTimer(featuresAdModal, 10);
+    });
+    $("#testimonialsAdModalButton").click(function(){ 
+      setTimer(testimonialsAdModal, 10);
+    });
+
+     // Set Carousel
+     $(".carousel").carousel({
+        interval: 7500,
+        wrap: false
+     });
+
+     // Play Videos
+     $(".icon-positioner, .icon-blue, .video-link ").click(function(){
+        var videoAttr = $(this).attr('data-video');
         var initialAdContent = $(this).closest("section").find(".initial-ad-content");
-        var adVideoWrapper = $(this).closest("section").find(".ad-video-wrapper");
-        var video = $(this).closest("section").find("iframe");
+        var adVideoWrapper = $(videoAttr);
+        var video = adVideoWrapper.find("iframe");
         videoSource = video.attr("src");
         videoSource = videoSource +"?autoplay=1"
         initialAdContent.hide(500);
         adVideoWrapper.show(500);
+        $('.back-to-features-link').show(500);
         video.attr("src",videoSource);
       });
+
+      $(".back-to-features-link").click(function(){
+        var initialAdContent = $(this).closest("section").find(".initial-ad-content");
+        $(".ad-video-wrapper").hide(500);
+        $('.back-to-features-link').hide(500);
+        initialAdContent.show(500);
+      });
+
+      //Testimonials menu
+
+      $(".menu-image").click(function(){
+        var clickedMenuItem = $(this).closest(".testimonial-menu-item");
+        var testimonialAttr = $(this).attr('data-testimonial');
+        var testimonial = $(testimonialAttr);
+
+        if(!clickedMenuItem.hasClass("active")){
+          $(".testimonial-menu-item").removeClass("active");
+          clickedMenuItem.addClass("active"); 
+
+          $(".testimomnial-wrapper").hide(500);
+          testimonial.show(500);
+        } 
+      })
+
+     // Helper Functions
+
+     function setTimer(modal, count){
+      var timerCount = modal.find("#timerCount");
+      var carousel = modal.find(".carousel");
+      var dismissModal = modal.find("#dismissModal");
+      var timer = modal.find("#timer");
+
+
+      timerCount.html(' '+count);
+      carousel.carousel();
+
+      setInterval(function(){
+         count--;
+         timerCount.html(' '+count);
+
+         if(count<=0){
+          dismissModal.prop("disabled", false);
+          timer.hide();
+         }
+       }, 1000);
+      }
+
+     function carouselNormalization() {
+     var items = $('#comparisonCarousel .carousel-item'), //grab all slides
+         heights = [], //create empty array to store height values
+         tallest; //create variable to make note of the tallest slide
+
+     if (items.length) {
+         function normalizeHeights() {
+             items.each(function() { //add heights to array
+                 heights.push($(this).height()); 
+             });
+             tallest = Math.max.apply(null, heights); //cache largest value
+             items.each(function() {
+                 $(this).css('min-height',tallest + 'px');
+             });
+         };
+         normalizeHeights();
+
+         $(window).on('resize orientationchange', function () {
+             tallest = 0, heights.length = 0; //reset vars
+             items.each(function() {
+                 $(this).css('min-height','0'); //reset min-height
+             }); 
+             normalizeHeights(); //run it again 
+         });
+        }
+      }
     </script>
+
   </body>
 </html>

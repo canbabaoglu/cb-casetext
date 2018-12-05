@@ -1,17 +1,20 @@
+/* ------------------------------------------------------------
+---------------------- IN OPINION ADS -------------------------
+--------------------------------------------------------------- */
 
 .ad-image{
    width: 100px;
    height: 115px;
 }
 
-/* -------------------- CTAS ---------------------- */
+/* -------------------- Ctas ---------------------- */
 .secondary-cta{
 	line-height: 1;
     font-size: 1rem;
 }
 
 
-/* ------------------ VIDEO AD --------------------- */
+/* ------------------ Video ad --------------------- */
 
 .video-explanation {
 	font-size: 1.20rem;
@@ -76,7 +79,11 @@
 	height: 100%;
 }
 
-/*------------------------- MODAL ADS ------------------------*/
+/* ------------------------------------------------------------
+-------------------------- MODAL ADS ---------------------------
+--------------------------------------------------------------- */
+
+/* -------------------- Table Ads ---------------------- */
 
 .table-row {
 	min-height: 60px;
@@ -116,6 +123,85 @@
 	color: #fff;
 	transform: rotate(45deg);
 	-webkit-transform: rotate(45deg);
-	}
+}
+
+/* -------------------- Video Ads ---------------------- */
+
+.modal-section .icon-positioner{
+	width: 200px;
+	height: 113px;
+}
+
+.modal-section .icon-bg{
+	top: 45px;
+	left:85px;
+}
+
+.modal-section .play-icon {
+	top: 40px;
+	left:80px;
+}
+
+.ad-video-wrapper {
+	position: relative;
+	display: none;
+	padding-bottom: 56.25%; /* 16:9 */
+	padding-top: 25px;
+	height: 0;
+}
+
+.ad-video {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.back-to-features-link {
+	display: none;
+}
+
+.text-link:hover {
+	text-decoration: underline !important;
+	cursor: pointer;
+}
+
+/* -------------------- Testimonial Ads ---------------------- */
+
+.menu-image{
+	width: 30px;
+	height: auto;
+	-webkit-filter: grayscale(100%); 
+    filter: grayscale(100%);
+}
+
+.list-inline-item.active .menu-image,
+.list-inline-item .menu-image:hover{
+	-webkit-filter: none; 
+    filter: none;
+    border: 2px solid #005aaa;
+    width: 45px;
+}
+
+.list-inline-item .menu-image:hover{
+	cursor: pointer;
+}
+
+.testimomnial-wrapper {
+	display: none;
+}
+
+.testimomnial-wrapper.active {
+	display: block;
+}
+
+
+
+
+
+
+
 
 
