@@ -160,8 +160,9 @@
     }
 
     testButton.onclick = function() {
-        Push.create("Hello from Sabe.io!", {
+        Push.create("Casetext test notification!", {
             body: "This is a web notification!",
+            icon: "img/casetext-icon.png"
             timeout: 5000,
             onClick: function() {
                 console.log(this);
