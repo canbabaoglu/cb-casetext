@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
     crossorigin="anonymous">
     <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/Notifications.css">
 
     <head>
       <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -119,16 +120,73 @@
   <body class="bg-light">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-md-8 offset-md-2">
-          <h1 class="display-5 py-3 border-bottom text-center">
-            Different ntofications to fire
-            <button class="btn btn-outline-primary" id="requestButton">Request permission</button>
-          </h1>
-          <div class="card">
-            <div class="card-body">
-              <h3 class="card-title">Test notification</h3>
-              <p class="card-text">Here is a test notification</p>
-              <button class="btn btn-outline-primary" id="testNotificationButton">Fire notification</button>
+        <div class="col-12 col-md-10 offset-md-1">
+          <div class="header border-bottom py-3 mb-3 text-center">
+            <h1 class="display-5">
+              Browser Notifications
+            </h1>
+            <div class="col-md-8 offset-md-2">
+              <p class="lead">Let's use browser notifications to bring visitors and trial users back. We may add subscriber browser notifications later.</p>
+            </div>
+          </div>
+          <!-- Basic Design and Structure -->
+          <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div class="content mr-3">
+                <h3 class="card-title">Basic Design & Structure</h3>
+                <p class="card-text">Here is what a notification looks like on Chrome on a Mac. This is not the real thing. It's me recreating it in html and css.</p>
+              </div>
+              <div class="notifications-wrapper">
+                <!-- Basic Structure -->
+                <div class="notification-container bg-light d-flex p-2 border notification-border">
+                  <img src="img/chrome-icon.png" class="notification-icon align-self-center mr-2">
+                  <div class="notification-content">
+                    <div class="notification-title">Notification title</div>
+                    <div class="notification-source">https://casetext.com</div>
+                    <div class="notification-body">Notification body</div>
+                  </div>
+                  <img src="img/casetext-icon.png" class="notification-icon align-self-center mr-2 ml-auto">
+                  <div class="notification-options border-left notification-options-border">
+                    <div class="options-container d-flex align-items-center justify-content-center border-bottom notification-options-border">
+                      Close
+                    </div>
+                    <div class="options-container d-flex align-items-center justify-content-center">
+                      Settings
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Example Content -->
+          <div class="card mb-3">
+            <div class="card-body d-flex justify-content-between align-items-center">
+              <div class="content mr-3">
+                <h3 class="card-title">Basic Example</h3>
+                <p class="card-text mb-0">Here is something we can potentially do</p>
+                <p class="card-text mb-0"><strong>Links to:</strong> Clicking the notification brings user to the casetext homepage.</p>
+              </div>
+              <div class="notifications-wrapper">
+                <!-- Example content -->
+                <div class="notification-container bg-light d-flex p-2 border notification-border">
+                  <img src="img/chrome-icon.png" class="notification-icon align-self-center mr-2">
+                  <div class="notification-content">
+                    <div class="notification-title">Need to do legal research</div>
+                    <div class="notification-source">https://casetext.com</div>
+                    <div class="notification-body">Try researching on casetext.</div>
+                  </div>
+                  <img src="img/casetext-icon.png" class="notification-icon align-self-center mr-2 ml-auto">
+                  <div class="notification-options border-left notification-options-border">
+                    <div class="options-container d-flex align-items-center justify-content-center border-bottom notification-options-border">
+                      Close
+                    </div>
+                    <div class="options-container d-flex align-items-center justify-content-center">
+                      Settings
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -144,31 +202,7 @@
   
 
   <script type="text/javascript">
-    var requestButton = document.querySelector("#requestButton");
-    var testButton = document.querySelector("#testNotificationButton");
 
-    function onGranted() {
-        requestButton.style.background = "green";
-    }
-
-    function onDenied() {
-        requestButton.style.background = "red";
-    }
-
-    requestButton.onclick = function() {
-        Push.Permission.request(onGranted, onDenied);
-    }
-
-    testButton.onclick = function() {
-        Push.create("Casetext test notification!", {
-            body: "This is a web notification!",
-            icon: "img/casetext-icon.png"
-            timeout: 5000,
-            onClick: function() {
-                console.log(this);
-            }
-        });
-    }
 
   </script>
 
