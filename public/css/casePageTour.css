@@ -1,0 +1,27 @@
+.tour-button-1 {
+	position: fixed;
+	bottom: 90px;
+	right: 18px;
+	height: 60px;
+	width: 60px;
+	border-radius: 100%; 
+	z-index: 10000000000000;
+	line-height: 1;
+	font-size: 0.9rem; 
+}
+
+.tour-button-1:hover {
+	cursor: pointer;
+}
+
+.tour-button-2{
+	position: fixed;
+	top: 170px;
+	left: 20px;
+	width: 170px;
+	z-index: 10000000000000;
+}
+
+.tour-title {
+	font-size: 1rem;
+}

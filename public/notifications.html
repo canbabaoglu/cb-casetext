@@ -12,7 +12,6 @@
       rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/notifications.css">
-
     <title>Notifications</title>
   </head>
   <body class="bg-light">
@@ -44,6 +43,8 @@
                     class="btn btn-primary mt-3 mt-md-0"
                     data-toggle="modal"
                     data-target="#trialConfirmationModal"
+                    data-backdrop="static" 
+                    data-keyboard="false"
                   >
                     Start My Free Trial
                   </button>
@@ -129,18 +130,20 @@
       <div class="modal-dialogue col-md-6 offset-md-3 mt-5 d-block">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title">Welcome to your free 14-day Casetext trial</h5>
-            <button class="close" data-dismiss="modal">&times;</button>
+            <h5 class="modal-title">Allow research notifications</h5>
           </div>
           <div class="modal-body">
             <div class="body-content-wrapper d-md-flex align-items-center">
-                <i class="material-icons bell-icon mr-2">notifications</i>
-                <p class="lead m-0">Make the most out of your 14 days. Turn on notifications to get timely tips and reminders from Casetext.</p>
+                <i class="material-icons bell-icon ml-3 mr-3 text-primary">notifications_active</i>
+                <div class="modal-text">
+                  <p class="lead m-0">Allow browser notifications so Casetext can send you alerts of new case law and other updates that match your research.</p>
+                  <p class="m-0 mt-2 text-muted anxiety-reducer">Don't worry, you can turn off notifications any time.</p>
+                </div>
             </div>
           </div>
           <div class="modal-footer">
             <button class="btn btn-primary allow-notification-btn">
-              Turn On Notifications
+              OK, I Understand
             </button>
           </div>
         </div>
