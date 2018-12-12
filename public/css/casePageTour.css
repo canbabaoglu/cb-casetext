@@ -14,14 +14,39 @@
 	cursor: pointer;
 }
 
+/* TOUR OPTION 2 */
+
 .tour-button-2{
 	position: fixed;
 	top: 170px;
 	left: 20px;
-	width: 170px;
+	width: 200px;
 	z-index: 10000000000000;
+}
+
+.tour-header:hover{
+	cursor: pointer;
 }
 
 .tour-title {
 	font-size: 1rem;
+}
+
+
+.feature-list-wrapper{
+	display: none;
+}
+
+.feature-list-item{
+	padding: 3px 10px;
+}
+
+.feature-list-item:hover,
+.feature-list-item.active{
+	background: #484848!important;
+	cursor: pointer;
+}
+
+.tour-tool-tip{
+	pointer-events: none;
 }
